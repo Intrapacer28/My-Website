@@ -1,0 +1,35 @@
+/* src/Home.css */
+.photo-wrapper {
+    position: absolute;
+    top: 20%;
+    left: 20px; /* Adjust for left side */
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    overflow: hidden; /* Ensures content does not overflow */
+  }
+  
+  .photo {
+    width: 100%; /* Ensures the image fits the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  
+  /* Responsive adjustments */
+@media (max-width: 768px) {
+    .photo {
+      width: 100px;
+      height: auto;
+    }
+  
+    .content {
+      margin-left: 130px; /* Adjust for smaller screens */
+    }
+  }
+
+  .home-page {
+    background-image: url("C:\Users\1234p\Videos\personal-website\src\assets\home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
