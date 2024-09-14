@@ -3,7 +3,7 @@ import React from 'react';
 import '../globalStyles.css'; // Ensure this import is at the top
 
 // Import the new background video file
-import backgroundVideo from '../assets/clouds-bg.mp4'; // Replace with your new video file path
+import backgroundVideo from '../assets/new-bg.mp4'; // Replace with your new video file path
 
 // Import the GIF file
 import backgroundGif from '../assets/home-bg.gif';
@@ -16,10 +16,6 @@ function Home() {
         Your browser does not support the video tag.
       </video>
       <img className="background-gif" src={backgroundGif} alt="Background GIF" />
-      <div className="content">
-        <h1></h1>
-        <p className="typing-animation"> </p>
-      </div>
     </div>
   );
 }

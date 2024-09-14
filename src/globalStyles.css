@@ -16,14 +16,10 @@ body {
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Full viewport width */
     overflow: hidden; /* Prevent scrolling */
-    display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    text-align: center; /* Center text within the content */
-    background-color: #000; /* Dark background color */
+    background-color: #000; /* Dark background */
 }
 
-.home-page video {
+.background-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -42,72 +38,6 @@ body {
     height: 100%;
     object-fit: contain;
     z-index: 1; /* Ensure the GIF is above the video */
-}
-
-.content {
-    position: relative;
-    z-index: 2; /* Ensure content is above the video and GIF */
-    color: white; /* Adjust text color for better visibility */
-    text-align: center; /* Center text horizontally */
-    padding: 20px; /* Add padding to ensure text is not touching edges */
-    max-width: 80%; /* Limit the width to prevent overflow */
-    box-sizing: border-box; /* Ensure padding is included in the element's width */
-    /* Flexbox for centering text within content */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Hover Effect Specific to Headers */
-.home-page .content h1:hover,
-.home-page .content p.typing-animation:hover {
-    color: rgb(68, 68, 61); /* Change color on hover */
-}
-
-/* Keyframe Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: white;
-  }
-}
-
-.content h1 {
-    font-family: 'Dancing Script', Courier, monospace, serif; /* Font for the name */
-    font-size: 3em; /* Adjust size as needed */
-    margin: 0;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.content p.typing-animation {
-    font-family: 'Pacifico', sans-serif; /* Font for the catchphrase */
-    font-size: 1.5em; /* Adjust size as needed */
-    white-space: nowrap; /* Prevent line breaks */
-    overflow: hidden; /* Hide overflowed text */
-    border-right: 2px solid white; /* Cursor effect */
-    display: inline-block; /* Make sure the text only takes as much width as needed */
-    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite; /* Updated animation duration */
 }
 
 
@@ -132,7 +62,7 @@ body {
   color: white; /* Text color */
   max-width: 800px; /* Limit width for readability */
   padding: 20px; /* Add padding for spacing */
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
+  background: rgba(144, 125, 125, 0.6); /* Semi-transparent background for better readability */
   border-radius: 10px; /* Rounded corners for the text container */
 }
 
