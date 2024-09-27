@@ -31,7 +31,7 @@ function Contact() {
         <div className="contact-item">
           <FaGithub className="icon" />
           <h2>GitHub</h2>
-          <a href="https://github.com/pranav" target="_blank" rel="noopener noreferrer">https://github.com/Intrapacer28?tab=repositories</a>
+          <a href="https://github.com/pranav" target="_blank" rel="noopener noreferrer">https://github.com/Intrapacer28/</a>
         </div>
       </div>
     </div>
