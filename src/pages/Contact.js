@@ -26,12 +26,12 @@ function Contact() {
         <div className="contact-item">
           <FaLinkedin className="icon" />
           <h2>LinkedIn</h2>
-          <a href="https://www.linkedin.com/in/pranav/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/pranav-ahire-a660b11a0</a>
+          <a href="https://www.linkedin.com/in/pranav/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
         <div className="contact-item">
           <FaGithub className="icon" />
           <h2>GitHub</h2>
-          <a href="https://github.com/Intrapacer28/" target="_blank" rel="noopener noreferrer">https://github.com/Intrapacer28/</a>
+          <a href="https://github.com/Intrapacer28/" target="_blank" rel="noopener noreferrer">Github</a>
         </div>
       </div>
     </div>
