@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
@@ -14,7 +13,7 @@ import './globalStyles.css'; // New global styles
 
 function App() {
   return (
-    <Router>
+    <Router basename="/My-Website">
       <Navbar /> {/* Include Navbar */}
       <Routes>
         <Route path="/" element={<Home />} />

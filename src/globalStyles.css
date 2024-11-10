@@ -62,8 +62,6 @@ body {
 /* Welcoming Text Styling - Fixed Center Right */
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alphonse:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alphonse:wght@400;700&family=Carla+Sans:wght@400;700&display=swap');
 
 
 /* General styling for welcoming text */
@@ -124,12 +122,6 @@ body {
 }
 
 
-
-
-
-
-
-  
   
 /* About Page */
 .about-page {
