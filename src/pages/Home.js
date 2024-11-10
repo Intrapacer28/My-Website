@@ -1,7 +1,7 @@
 import React from 'react';
 import '../globalStyles.css';
-import backgroundVideo from '../assets/new-bg.mp4';
-import backgroundGif from '../assets/home.jpg';
+import backgroundVideo from '../assets/new-bg.mp4';  // Ensure this is correctly resolved
+import backgroundGif from '../assets/home.jpg';  // Ensure this is correctly resolved
 
 function Home() {
   const textLines = [
