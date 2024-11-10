@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/My-Website/static/css/main.51b7dda3.css",
+    "main.js": "/My-Website/static/js/main.3cf87a8b.js",
+    "static/js/453.253ccfac.chunk.js": "/My-Website/static/js/453.253ccfac.chunk.js",
+    "static/media/new-bg.mp4": "/My-Website/static/media/new-bg.3f51f4c261be13cfe947.mp4",
+    "static/media/about.jpg": "/My-Website/static/media/about.4098a9f9bf7cc879ea59.jpg",
+    "static/media/Pranav-Resume.pdf": "/My-Website/static/media/Pranav-Resume.a2fff685275080c629ef.pdf",
+    "static/media/home.jpg": "/My-Website/static/media/home.a7768bf180eec98ef0c9.jpg",
+    "static/media/contact.jpg": "/My-Website/static/media/contact.72f20d99b58e64801692.jpg",
+    "static/media/portfolio.jpg": "/My-Website/static/media/portfolio.925c316d4a061580c9a7.jpg",
+    "static/media/resume.jpeg": "/My-Website/static/media/resume.a2fe94cdf0fab1892836.jpeg",
+    "static/media/slick.svg": "/My-Website/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/My-Website/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/My-Website/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/My-Website/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/My-Website/index.html",
+    "main.51b7dda3.css.map": "/My-Website/static/css/main.51b7dda3.css.map",
+    "main.3cf87a8b.js.map": "/My-Website/static/js/main.3cf87a8b.js.map",
+    "453.253ccfac.chunk.js.map": "/My-Website/static/js/453.253ccfac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51b7dda3.css",
+    "static/js/main.3cf87a8b.js"
+  ]
+}
