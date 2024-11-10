@@ -1,14 +1,14 @@
-// src/pages/Home.js
 import React from 'react';
-import '../globalStyles.css'; // Ensure this import is at the top
-
-// Import the new background video file
-import backgroundVideo from '../assets/new-bg.mp4'; // Replace with your new video file path
-
-// Import the GIF file
-import backgroundGif from '../assets/home-bg.gif';
+import '../globalStyles.css';
+import backgroundVideo from '../assets/new-bg.mp4';
+import backgroundGif from '../assets/home.jpg';
 
 function Home() {
+  const textLines = [
+    "Welcome to my PORTFOLIO,",
+    "I am Pranav, A NET-Ninja..."
+  ];
+
   return (
     <div className="home-page">
       <video className="background-video" autoPlay loop muted>
@@ -16,6 +16,15 @@ function Home() {
         Your browser does not support the video tag.
       </video>
       <img className="background-gif" src={backgroundGif} alt="Background GIF" />
+
+      {/* Display the welcoming text */}
+      <div className="welcoming-text">
+        {textLines.map((line, lineIndex) => (
+          <div key={lineIndex} className="line">
+            {line}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

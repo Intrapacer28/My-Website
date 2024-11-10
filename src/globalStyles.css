@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -11,98 +12,268 @@ body {
     overflow: hidden; /* Prevent scrolling globally if needed */
 }
 
+/* Home Page Container */
 .home-page {
-    position: relative;
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
-    overflow: hidden; /* Prevent scrolling */
-    background-color: #000; /* Dark background */
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content both vertically and horizontally */
+  color: white;
 }
 
+/* Background Video */
 .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Ensure the video is behind other content */
-    pointer-events: none; /* Prevent interaction with the video */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out; /* Smooth transition for fade-in/out effects */
 }
 
+/* Background GIF */
 .background-gif {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    z-index: 1; /* Ensure the GIF is above the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  transform: translate(-50%, -50%); /* Center the GIF both vertically and horizontally */
+  opacity: 0.8; /* Slight transparency for a modern look */
+  transition: opacity 0.3s ease-in-out; /* Smooth opacity transition for hover or interaction */
 }
+
+/* Optional: Add hover effect for GIF */
+.background-gif:hover {
+  opacity: 1; /* Full opacity on hover */
+}
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
+
+/* Welcoming Text Styling - Fixed Center Right */
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alphonse:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alphonse:wght@400;700&family=Carla+Sans:wght@400;700&display=swap');
+
+
+/* General styling for welcoming text */
+.welcoming-text {
+  position: absolute;
+  top: 50%;
+  right: -15%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center vertically */
+  font-family: 'Alphonse', sans-serif;
+  font-size: 3em; /* Slightly larger for better visibility */
+  font-weight: 800; /* Bold text */
+  color: rgba(52, 38, 26, 1); /* Darker brown color */
+  text-align: left;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  opacity: 1; /* Ensure text is fully visible from the start */
+  z-index: 1;
+  animation: fadeInText 2s ease-out, scaleUpText 1s ease-out forwards, typing 4s steps(30) 1s 1 normal forwards; /* Apply typing effect */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide the overflowing text initially */
+}
+
+/* Fade-in effect for the welcoming text */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; /* End opacity at 1 so text remains visible */
+  }
+}
+
+/* Scale-up effect for the welcoming text */
+@keyframes scaleUpText {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8); /* Start smaller */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1); /* End at normal size */
+  }
+}
+
+/* Typing effect */
+@keyframes typing {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .welcoming-text {
+    font-size: 2em; /* Smaller text on mobile */
+  }
+}
+
+
+
+
+
 
 
   
   
 /* About Page */
 .about-page {
-  display: flex; /* Use flexbox for layout */
-  position: relative; /* Required for positioning elements */
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
-  overflow: hidden; /* Hide overflow */
-  background: url('./assets/about.jpg') no-repeat center center;
-  background-size: cover; /* Ensure the background image covers the entire area */
   display: flex;
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  text-align: center; /* Center text within the content */
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: url('./assets/about.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: 'Open Sans', sans-serif; /* Default font for the page */
+  padding: 20px; /* Add some padding to avoid edge-to-edge content */
 }
 
+/* Text Container */
 .text {
-  color: white; /* Text color */
-  max-width: 800px; /* Limit width for readability */
-  padding: 20px; /* Add padding for spacing */
-  background: rgba(144, 125, 125, 0.6); /* Semi-transparent background for better readability */
-  border-radius: 10px; /* Rounded corners for the text container */
+  max-width: 800px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Soft shadow for depth */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition effects */
 }
 
+.text:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+  opacity: 0.9; /* Slight opacity change on hover */
+}
+
+/* Heading Style */
 .about-heading {
-  font-family: 'Roboto Slab', serif; /* Font for the heading */
-  font-size: 3em; /* Increased size for better visibility */
-  font-weight: bold; /* Make heading bold */
-  margin-bottom: 20px; /* Space below heading */
+  font-family: 'Roboto Slab', serif;
+  font-size: 3.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Add uppercase styling for a more striking heading */
+  letter-spacing: 2px; /* Slight letter spacing for elegance */
 }
 
+/* Description Style */
 .about-description {
-  font-family: 'Open Sans', sans-serif; /* Font for the description */
-  font-size: 1.5em; /* Increased size for better readability */
-  margin-bottom: 30px; /* Space below paragraph */
-  line-height: 1.6; /* Improve readability with line height */
-  color: #f5f5f5; /* Slightly lighter text color for better contrast */
+  font-size: 1.6em;
+  margin-bottom: 25px;
+  line-height: 1.8; /* Increase line height for better readability */
+  color: #f5f5f5;
+  font-weight: 300; /* Lighter font for description */
+  max-width: 90%; /* Ensure it's responsive */
+  margin-left: auto;
+  margin-right: auto; /* Centering the paragraph */
 }
 
+/* Icons Section */
 .icons {
-  display: flex; /* Flex container for icons */
-  justify-content: center; /* Center icons horizontally */
-  gap: 20px; /* Space between icons */
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px; /* Space above the icons */
+  flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
 }
 
 .icon-item {
-  display: flex; /* Flex container for icon and text */
-  flex-direction: column; /* Stack icon and text vertically */
-  align-items: center; /* Center align items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 120px; /* Limit icon size */
+  margin-bottom: 20px;
 }
 
 .icon {
-  font-size: 3em; /* Adjust icon size */
-  color: #f39c12; /* Icon color */
-  margin-bottom: 10px; /* Space below icon */
+  font-size: 3.5em;
+  color: #f39c12;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transitions for icon effects */
+}
+
+.icon:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+  color: #e67e22; /* Change color on hover */
 }
 
 .icon-item p {
-  font-family: 'Open Sans', sans-serif; /* Font for icon labels */
-  font-size: 1em; /* Adjust size as needed */
-  color: white; /* Text color */
+  font-size: 1.1em;
+  color: white;
+  font-weight: 400; /* Light text for better contrast */
+  margin-top: 8px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .about-heading {
+      font-size: 3em; /* Adjust heading size on medium screens */
+  }
+
+  .about-description {
+      font-size: 1.4em; /* Adjust font size for readability */
+  }
+
+  .icons {
+      gap: 15px;
+  }
+
+  .icon-item {
+      max-width: 100px; /* Reduce icon size on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+      max-width: 90%; /* Increase width on small screens */
+      padding: 20px; /* Adjust padding */
+  }
+
+  .about-heading {
+      font-size: 2.5em;
+  }
+
+  .about-description {
+      font-size: 1.3em;
+      margin-bottom: 20px;
+  }
+
+  .icons {
+      flex-direction: column; /* Stack icons vertically */
+  }
+
+  .icon-item {
+      margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-heading {
+      font-size: 2em;
+  }
+
+  .about-description {
+      font-size: 1.2em;
+  }
 }
 
 
@@ -234,7 +405,7 @@ body {
   /* Resume Page */
 .resume-page {
   padding: 20px;
-  background: url('./assets/resume.jpg') no-repeat center center fixed;
+  background: url('./assets/resume.jpeg') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh; /* Ensure at least viewport height */
   color: #fff;
@@ -278,16 +449,32 @@ body {
 }
 
   
-/* Contact */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* Global Body Styling */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #333;
+  box-sizing: border-box; /* Ensure padding and borders are included in element width/height */
 }
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Body Styling */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  box-sizing: border-box; /* Ensure padding and borders are included in element width/height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Contact Page */
 .contact-page {
   display: flex;
   flex-direction: column;
@@ -295,37 +482,65 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background: url('./assets/contact.jpg') no-repeat center center;
+  background: url('./assets/contact.jpg') no-repeat center center fixed;
   background-size: cover;
   padding: 20px;
+  color: white;
+  position: relative;
 }
 
+/* Add a subtle dark overlay to the background for better text visibility */
+.contact-page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Contact Heading */
 .contact-heading {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5em;
+  font-size: 3em;
   color: #fff;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  animation: fadeIn 2s ease-out;
 }
 
+/* Contact Info Container */
 .contact-info {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
 }
 
+/* Contact Item Styles */
 .contact-item {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 15px;
+  padding: 25px;
   width: 280px;
   text-align: center;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   border: 2px solid #f39c12;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.contact-item:nth-child(even) {
+  animation-delay: 0.5s; /* Delay animation for alternating items */
 }
 
 .contact-item:hover {
@@ -333,18 +548,27 @@ body {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
+/* Contact Item Title */
 .contact-item h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.6em;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #333;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
+.contact-item:hover h2 {
+  color: #f39c12;
+}
+
+/* Contact Item Link Styling */
 .contact-item a {
-  font-family: 'Roboto', sans-serif;
   color: #3498db;
   text-decoration: none;
   font-size: 1.2em;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .contact-item a:hover {
@@ -352,16 +576,116 @@ body {
   color: #2980b9;
 }
 
+/* Contact Item Paragraph Styling */
 .contact-item p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #555;
-  margin: 5px 0;
+  margin: 10px 0;
+  transition: color 0.3s ease;
 }
 
-/* Optional: Add icons for better visual appeal */
+.contact-item:hover p {
+  color: #666;
+}
+
+/* Optional Icon Styling */
 .contact-item .icon {
-  font-size: 2em;
+  font-size: 2.5em;
   color: #f39c12;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover .icon {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller screens */
+@media (max-width: 1024px) {
+  .contact-heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+  .contact-item {
+    width: 260px;
+    padding: 20px;
+    opacity: 1;
+  }
+
+  .contact-item:nth-child(even) {
+    animation-delay: 0s; /* Remove animation delay for smaller screens */
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .contact-heading {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+  }
+
+  .contact-item {
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+    margin: 10px 0;
+    opacity: 1;
+  }
+
+  .contact-item p {
+    font-size: 1em;
+  }
+
+  .contact-item a {
+    font-size: 1.1em;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .contact-heading {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  .contact-item {
+    width: 100%;
+    max-width: 280px;
+    padding: 15px;
+    opacity: 1;
+  }
+
+  .contact-item p {
+    font-size: 0.9em;
+  }
+
+  .contact-item a {
+    font-size: 1.1em;
+  }
 }
