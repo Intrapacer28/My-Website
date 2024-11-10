@@ -6,131 +6,121 @@
 
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow: hidden; /* Prevent scrolling globally if needed */
 }
 
 /* Home Page Container */
 .home-page {
-position: relative;
-height: 100vh;
-width: 100vw;
-background-color: #000;
-display: flex;
-justify-content: center;
-align-items: center;
-color: white;
-overflow: hidden; /* Prevent global scroll */
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content both vertically and horizontally */
+  color: white;
 }
 
 /* Background Video */
 .background-video {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-z-index: -1;
-pointer-events: none;
-transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out; /* Smooth transition for fade-in/out effects */
 }
 
 /* Background GIF */
 .background-gif {
-position: absolute;
-top: 50%;
-left: 50%;
-width: 100%;
-height: 100%;
-object-fit: contain;
-z-index: 1;
-transform: translate(-50%, -50%);
-opacity: 0.8;
-transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  transform: translate(-50%, -50%); /* Center the GIF both vertically and horizontally */
+  opacity: 0.8; /* Slight transparency for a modern look */
+  transition: opacity 0.3s ease-in-out; /* Smooth opacity transition for hover or interaction */
 }
 
+/* Optional: Add hover effect for GIF */
 .background-gif:hover {
-opacity: 1;
+  opacity: 1; /* Full opacity on hover */
 }
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
 
+/* Welcoming Text Styling - Fixed Center Right */
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alphonse:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alphonse:wght@400;700&family=Carla+Sans:wght@400;700&display=swap');
 
-/* Welcoming Text Styling */
+
+/* General styling for welcoming text */
 .welcoming-text {
-position: absolute;
-top: 50%;
-right: 10%; /* Adjusted for visibility */
-transform: translate(-50%, -50%);
-font-family: 'Alphonse', sans-serif;
-font-size: 3em;
-font-weight: 800;
-color: rgba(52, 38, 26, 1);
-text-align: left;
-letter-spacing: 1.5px;
-line-height: 1.2;
-opacity: 1;
-z-index: 1;
-animation: fadeInText 2s ease-out, scaleUpText 1s ease-out forwards, typing 4s steps(30) 1s 1 normal forwards;
-white-space: nowrap;
-overflow: hidden;
+  position: absolute;
+  top: 50%;
+  right: -15%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center vertically */
+  font-family: 'Alphonse', sans-serif;
+  font-size: 3em; /* Slightly larger for better visibility */
+  font-weight: 800; /* Bold text */
+  color: rgba(52, 38, 26, 1); /* Darker brown color */
+  text-align: left;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  opacity: 1; /* Ensure text is fully visible from the start */
+  z-index: 1;
+  animation: fadeInText 2s ease-out, scaleUpText 1s ease-out forwards, typing 4s steps(30) 1s 1 normal forwards; /* Apply typing effect */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide the overflowing text initially */
 }
 
-/* Keyframes for effects */
+/* Fade-in effect for the welcoming text */
 @keyframes fadeInText {
-0% { opacity: 0; }
-100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; /* End opacity at 1 so text remains visible */
+  }
 }
 
+/* Scale-up effect for the welcoming text */
 @keyframes scaleUpText {
-0% { transform: translate(-50%, -50%) scale(0.8); }
-100% { transform: translate(-50%, -50%) scale(1); }
+  0% {
+    transform: translate(-50%, -50%) scale(0.8); /* Start smaller */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1); /* End at normal size */
+  }
 }
 
+/* Typing effect */
 @keyframes typing {
-0% { visibility: hidden; }
-100% { visibility: visible; }
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
 }
 
-/* Responsive styling for tablets */
-@media (max-width: 1024px) {
-.welcoming-text {
-  font-size: 2.5em; /* Adjust for tablet */
-  right: 5%;
-}
-}
-
-/* Responsive styling for mobile screens */
+/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
-.home-page {
-  padding: 20px; /* Provide padding for mobile */
-}
-
-.welcoming-text {
-  font-size: 1.8em;
-  right: 5%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
-
-/* Center GIF */
-.background-gif {
-  width: 80%;
-  height: auto; /* Adjust width on mobile */
-}
-}
-
-@media (max-width: 480px) {
-.welcoming-text {
-  font-size: 1.5em; /* Smaller text on smaller mobile screens */
-  text-align: center;
-  right: 0; /* Center text on very small screens */
-}
+  .welcoming-text {
+    font-size: 2em; /* Smaller text on mobile */
+  }
 }
 
 
@@ -302,7 +292,6 @@ overflow: hidden;
   justify-content: flex-start;
 }
 
-/* Portfolio Heading */
 .portfolio-heading {
   text-align: center;
   font-family: 'Roboto Slab', serif;
@@ -328,6 +317,7 @@ overflow: hidden;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  height: auto;
   max-width: 350px;
   box-sizing: border-box;
 }
@@ -381,11 +371,11 @@ overflow: hidden;
 
 /* Slick Carousel styles */
 .slick-slide {
-  margin: 0 10px;
+  margin: 0 10px; /* Adjust margin between slides */
 }
 
 .slick-dots {
-  bottom: -30px;
+  bottom: -30px; /* Position the dots below the slider */
 }
 
 .slick-arrow {
@@ -409,96 +399,15 @@ overflow: hidden;
   right: -40px;
 }
 
-/* Responsive styling for tablets */
-@media (max-width: 1024px) {
-  .portfolio-heading {
-    font-size: 2em;
-  }
-
-  .project-card {
-    max-width: 300px;
-  }
-
-  .slick-arrow {
-    width: 25px;
-    height: 25px;
-    font-size: 20px;
-  }
-}
-
-/* Responsive styling for mobile screens */
-@media (max-width: 768px) {
-  .portfolio-page {
-    padding: 15px;
-    background-attachment: scroll; /* Prevent fixed background on mobile for smoother scrolling */
-  }
-
-  .portfolio-heading {
-    font-size: 1.8em;
-    margin: 20px 0;
-  }
-
-  .project-card {
-    max-width: 90%;
-    padding: 15px;
-  }
-
-  .project-image {
-    height: 120px; /* Adjust image height */
-  }
-
-  .project-details h2 {
-    font-size: 1.2em;
-  }
-
-  .project-details p {
-    font-size: 0.9em;
-  }
-
-  .button {
-    padding: 8px 16px;
-    font-size: 0.9em;
-  }
-
-  .slick-arrow {
-    width: 20px;
-    height: 20px;
-    font-size: 18px;
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-  .portfolio-heading {
-    font-size: 1.5em;
-  }
-
-  .project-card {
-    padding: 10px;
-  }
-
-  .project-details h2 {
-    font-size: 1em;
-  }
-
-  .project-details p {
-    font-size: 0.85em;
-  }
-
-  .button {
-    padding: 6px 12px;
-    font-size: 0.8em;
-  }
-}
 
 
   
-/* Resume Page */
+  /* Resume Page */
 .resume-page {
   padding: 20px;
   background: url('./assets/resume.jpeg') no-repeat center center fixed;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure at least viewport height */
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -517,7 +426,7 @@ overflow: hidden;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
   margin: 20px 0;
-  max-width: 800px;
+  max-width: 800px; /* Limit width for readability */
 }
 
 .resume-link {
@@ -539,6 +448,7 @@ overflow: hidden;
   background-color: #e67e22;
 }
 
+  
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -548,65 +458,21 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: #333;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  box-sizing: border-box; /* Ensure padding and borders are included in element width/height */
 }
 
-/* Responsive styling for tablets */
-@media (max-width: 1024px) {
-  .resume-heading {
-    font-size: 2em;
-  }
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-  .resume-intro {
-    font-size: 1.1em;
-    max-width: 700px;
-  }
-
-  .resume-link a {
-    padding: 8px 16px;
-  }
+/* Global Body Styling */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  box-sizing: border-box; /* Ensure padding and borders are included in element width/height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-
-/* Responsive styling for mobile screens */
-@media (max-width: 768px) {
-  .resume-page {
-    padding: 15px;
-    background-attachment: scroll; /* Smooth scrolling on mobile */
-  }
-
-  .resume-heading {
-    font-size: 1.8em;
-    margin: 15px 0;
-  }
-
-  .resume-intro {
-    font-size: 1em;
-    max-width: 90%;
-  }
-
-  .resume-link a {
-    padding: 8px 16px;
-    font-size: 0.9em;
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-  .resume-heading {
-    font-size: 1.5em;
-  }
-
-  .resume-intro {
-    font-size: 0.9em;
-  }
-
-  .resume-link a {
-    padding: 6px 12px;
-    font-size: 0.8em;
-  }
-}
-
 
 /* Contact Page */
 .contact-page {
